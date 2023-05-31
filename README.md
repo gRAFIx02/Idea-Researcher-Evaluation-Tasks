@@ -46,3 +46,23 @@ Q1.2
 The `bpy` module is used for interacting with the Blender's functionality and data. It supports the entirety of the 3D pipeline, that is modeling,rigging, animation, simulation, rendering, etc. This module serves as a bridge between Python and Blender, allowing the user to control and manipulate various aspects of the 3D scene.
 
 In order to manipulate the object transformation in a 3D scene, we first have to get control over the object using `bpy.context.active_object`. Then, we can apply required transformations on the object by calling the corresponding functions. The example code snippet in Q1.1 contains the transformation example as well, where we select the `cube` object and perform translation, scaling and rotation operations on it.
+
+
+## Python & Docker
+
+Q2.1
+
+Steps to create a Docker container for a Python-based application are:
+- Create a folder where all the required codes and files will be kept.
+- Create necessary **.py** files with required codes.
+- Create a **Dockerfile** with no extensions.
+- Include necessary information inside the **Dockerfile**.
+- From the terminal, package the application using the command  ```docker build -t <image_name> .```. This will create a docker image.
+- Run the docker image using the command ```docker run --name <container_name> <image-name>```. This will create the required docker container.
+
+The information we would need to add to the **Dockerfile** are:
+- Specify the base image for the docker image using the instruction ```FROM```.
+- Install any required dependencies using the instruction ```RUN```.
+- Copy any required files from the local system to the docker image using the instruction ```COPY```.
+- Set the current working directory for the subsequent commands using the instruction ```WORKDIR```.
+- Include the commands to run when the docker starts using the instruction ```CMD```.
