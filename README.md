@@ -66,3 +66,14 @@ The information we would need to add to the **Dockerfile** are:
 - Copy any required files from the local system to the docker image using the instruction ```COPY```.
 - Set the current working directory for the subsequent commands using the instruction ```WORKDIR```.
 - Include the commands to run when the docker starts using the instruction ```CMD```.
+
+Q2.1
+
+We can use Docker Compose to manage multi-container Python applications in the following ways:
+- Create a ```docker-compose.yml``` file to define the services. This should be placed in the root directory of the project. The services can be configurations, dependencies, database, etc.
+- Specify the container configurations inside the ```docker-compose.yml```, for example: specifying the base image, port mappings, environment variables, API, etc.
+- Define any dependencies and relationships. For example, if the application relies on any database for various actions, the relationship and dependencies with the database should be defined.
+- If we have custome Docker image, we can build it using ```docker-compose build``` command. If we want to use a pre-built image, Docker compose will automatically pull the image while running the service.
+- Start the services using ```docker-compose up``` command. All the services defined in the ```docker-compose.yml``` file will be started. Docker compose will start all the containers, and the services will be run on separate isolated networks.
+- Once the Docker Compose is run, we can interact with the Python application.
+- To stop and clean up the services, we use ```docker-compose down``` command.
