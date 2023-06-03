@@ -77,3 +77,17 @@ We can use Docker Compose to manage multi-container Python applications in the f
 - Start the services using ```docker-compose up``` command. All the services defined in the ```docker-compose.yml``` file will be started. Docker compose will start all the containers, and the services will be run on separate isolated networks.
 - Once the Docker Compose is run, we can interact with the Python application.
 - To stop and clean up the services, we use ```docker-compose down``` command.
+
+## JavaScript 3D (Three.js)
+
+Q3.1
+
+The fundamental components required to render a basic 3D scene using Three.js are:
+- A **renderer** is needed for rendering the 3D scene on the HTML canvas. It can be done using the function ```THREE.WebGLRenderer``` or ```THREE.CanvasRenderer```.
+- A **scene** is required to hold all the objects that make up a scene. This can be done using the function ```THREE.scene```.
+- A **camera** is required for the perspective and viewpoint from which the scene is viewed. There are multiple camera viewpoints, and depending on the requirement, one is chosen for the project.
+- **Geometry** is required to define the type of object that we will be using in our scene. It can be a cube, sphere, cylinder, etc. These can be created using the function ```THREE.Geometry```.
+- **Materials** define the texture, colour and other visual properties of a geometry, for example the diffused material, Phone material, Lambertian material, etc.
+- A **mesh** is created by combining the geometry with the material. The mesh can be then used to perform transformations, like translation, scaling or rotation.
+- **Lighting** is needed for getting a realistic 3D scene. There are various types of light, like point light, ambient light, directional light, etc. Depending on the requirement of the scene the light source is chosen.
+- **Control** is an optional component, which is used when we want to include user interaction with the 3D scene. For example, letting the user view around a 3D car model by interacting with it.
