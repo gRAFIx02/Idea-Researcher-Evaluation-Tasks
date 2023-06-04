@@ -91,3 +91,13 @@ The fundamental components required to render a basic 3D scene using Three.js ar
 - A **mesh** is created by combining the geometry with the material. The mesh can be then used to perform transformations, like translation, scaling or rotation.
 - **Lighting** is needed for getting a realistic 3D scene. There are various types of light, like point light, ambient light, directional light, etc. Depending on the requirement of the scene the light source is chosen.
 - **Control** is an optional component, which is used when we want to include user interaction with the 3D scene. For example, letting the user view around a 3D car model by interacting with it.
+
+Q3.2
+
+In order to import and use a 3D model created in Blender in a Three.js application, we have to:
+- Export the 3D model from Blender in **gltf** or **glb** format as Three.js works with 3D models in these formats.
+- Add the file to the Three.js project folder and mention the path in the relevant part of the code.
+- The model can be loaded using the **GLTFLoader** library from Three.js. If any necesaary transformations need to be done, they can be done after loading the model.
+- If we want the model to loop forever, we need to create an update loop for the model by taking the difference of the starting and ending time from ```getDelta()``` function, and then passing the value inside the ```update()``` function as ```clock.getDelta()```.
+- Finally, render the scene as usual.
+
