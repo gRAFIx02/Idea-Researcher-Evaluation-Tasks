@@ -181,3 +181,12 @@ CMD ["python", "app.py"]
 docker build -t myapp .
 docker run -p 5000:5000 myapp
 ```
+
+Q4.2
+
+There can be a number of challenges and difficulties while developing this kind of application. Some of the challenges are given below:
+- **Compatibility and Versioning**: Blender, Flask and Docker all have different versions and dependencies. Ensuring compatibility among these components can be a challenging task. For this, we have to make sure the components and their dependencies are compatible with one another before we start developing/ deploying the application.
+- **Resource Consumption**: Generating 3D models can be a resource intensive task, especially for models with large number of polygons and more sophisticated rigging. In these case, we need to have a good hardware to make sure we get good performance, as well as try to write the Python scripts as efficiently as possible.
+- **Networking and File Paths**: When running in a Docker container, networking and file paths can be different from the local development environment. We need to ensure that networking between the Flask application and Blender script works correctly, and handle file paths properly for accessing and exporting 3D models. Use relative file paths, mount volumes or use appropriate file-sharing mechanisms between the container and the host, and consider configuring network settings in the Docker environment.
+- **Security**: This is a very important aspect as with any web application, security is the main concern. We need to develop the application such that it is not vulnerable to malicious attacks like injection, DOS, unauthorized access, etc. By regularly updating the dependencies and updating any security patches, this challenge can be overcome.
+- **Scalability and Performance**: As the user base or the complexity of the 3D model grows, the scalability and performance of the application may become an issue. We need to monitor the performance, any scope of bottlenecks and other performance issues of the application as it keeps growing. We can implement caching mechanism, more optimized codes, asynchronous processing for time consuming tasks in order to overcome this issue.
