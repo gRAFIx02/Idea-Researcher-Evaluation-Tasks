@@ -223,3 +223,17 @@ CMD ["npm", "start"]
 
 - **Build the Docker image** using the command `docker build -t nodeapp .`.
 - **Run the Docker container** with the command `docker run -p 5000:5000 nodeapp`. Thus, the Node.js application serving the web-based 3D viewer powered by Three.js will be running inside a Docker container which can be accessed from `http://localhost:5000`.
+
+Q5.2
+
+Considerations that I would need to keep in mind when deploying this Docker container in a production environment are:
+- Using a **container orchestration tool** like Kubernetes or Docker Swarm to manage and scale the Docker containers. These tools help in load balancing, scaling and monitoring of the containers.
+- **Security** is one of the most important concerns of a web-based application. We need to ensure the application is always updated with latest dependencies, patching any security holes as soon as possible and taking actions to block any kind of unauthorized or malicious attacks.
+- As the web application grows, the number of user base may grow and the 3D models may get more complex. This can lead to **scalability and performance** issues. We need to keep in mind the resources we are using, and scale the resources such that the performance of the application remains good while the system doesn't get too complex or overloaded.
+- Establish **continuous integration and deployment (CI/CD)** to automate the build, test and deployment process of the contenarized application.
+- We should keep a **backup and disaster recovery** strategy in case of any major failure or data corrpution.
+
+
+## Practical Task: Genetate a 3D Pyramid in Blender using Python
+
+**Code:**
