@@ -39,7 +39,8 @@ cube.rotation_euler = (0.3, 0.5, 0.2)
 ```
 
 ### Output
-![Screenshot 2023-05-27 155538](https://github.com/gRAFIx02/Idea-Researcher-Evaluation-Tasks/assets/71190713/344ecdd2-9252-44b4-8288-67451bebe717)
+![Screenshot 2023-05-27 155538](https://github.com/gRAFIx02/Idea-Researcher-Evaluation-Tasks/assets/71190713/5f896a10-0075-4d26-be63-d2aa1c7341d4)
+
 
 Q1.2
 
@@ -272,8 +273,8 @@ bpy.ops.export_scene.gltf(filepath="F:\Edit\Blender\Pyramid.gltf")
 
 **Output:**
 
-![Screenshot 2023-06-05 121340](https://github.com/gRAFIx02/Idea-Researcher-Evaluation-Tasks/assets/71190713/d303142d-a34a-4256-8439-61e62c7a7b8b)
+![Screenshot 2023-06-05 121340](https://github.com/gRAFIx02/Idea-Researcher-Evaluation-Tasks/assets/71190713/979b29a9-fd41-42c3-8109-b3b49d3cc1ec)
 
-![Screenshot 2023-06-05 121429](https://github.com/gRAFIx02/Idea-Researcher-Evaluation-Tasks/assets/71190713/1d70bf6e-497b-4dc4-b049-795035b2bd1f)
+![Screenshot 2023-06-05 121429](https://github.com/gRAFIx02/Idea-Researcher-Evaluation-Tasks/assets/71190713/9fc39a98-881b-4c77-b637-3606c4f5b657)
 
-![Screenshot 2023-06-05 121406](https://github.com/gRAFIx02/Idea-Researcher-Evaluation-Tasks/assets/71190713/79b245dd-9369-48c8-b5e0-73e7000737f9)
+![Screenshot 2023-06-05 121406](https://github.com/gRAFIx02/Idea-Researcher-Evaluation-Tasks/assets/71190713/ca9cdc9b-ee59-4916-8981-8c623a98d5d3)
