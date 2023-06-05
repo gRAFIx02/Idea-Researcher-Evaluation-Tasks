@@ -237,3 +237,43 @@ Considerations that I would need to keep in mind when deploying this Docker cont
 ## Practical Task: Genetate a 3D Pyramid in Blender using Python
 
 **Code:**
+
+```python
+import bpy
+
+# Clear existing mesh objects
+bpy.ops.object.select_by_type(type='MESH')
+bpy.ops.object.delete()
+
+# Create a new mesh object
+mesh = bpy.data.meshes.new(name="PyramidMesh")
+obj = bpy.data.objects.new("Pyramid", mesh)
+
+# Link the object to the scene
+scene = bpy.context.scene
+scene.collection.objects.link(obj)
+
+# Create a pyramid
+verts = [(4, 4, 0), (4, -4, 0), (-4, -4, 0), (-4, 4, 0), (0, 0, 6)]
+faces = [(0, 1, 4), (1, 2, 4), (2, 3, 4), (3, 0, 4)]
+
+# Update the mesh with the new data
+mesh.from_pydata(verts, [], faces)
+
+# Center the pyramid in the scene
+obj.location = (0, 0, 0)
+
+# Update the scene
+bpy.context.view_layer.update()
+
+# Export the model in GLTF format
+bpy.ops.export_scene.gltf(filepath="F:\Edit\Blender\Pyramid.gltf")
+```
+
+**Output:**
+
+![Screenshot 2023-06-05 121340](https://github.com/gRAFIx02/Idea-Researcher-Evaluation-Tasks/assets/71190713/d303142d-a34a-4256-8439-61e62c7a7b8b)
+
+![Screenshot 2023-06-05 121429](https://github.com/gRAFIx02/Idea-Researcher-Evaluation-Tasks/assets/71190713/1d70bf6e-497b-4dc4-b049-795035b2bd1f)
+
+![Screenshot 2023-06-05 121406](https://github.com/gRAFIx02/Idea-Researcher-Evaluation-Tasks/assets/71190713/79b245dd-9369-48c8-b5e0-73e7000737f9)
